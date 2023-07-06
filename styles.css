@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height:100vh;
+    overflow-x:hiddenf; 
+    /* image right mei scrool nhi hogi */
+    overflow-y: auto;
+    perspective: 10px;
+}
+/* container isliye use kiye kyu ki flex banana tha */
+ .container{
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    /* iska meaning is that ke jo maine parallex effect lana chata hu wo 3d mei aayga agr nhi lagata tb wo dono image chipak jaati and 2d waala scene ho jata!!*/
+    z-index:-1;
+    /* z-index overlapping ke lie hota h ki konsi layer kis ke upar aaygi layering ke liye bataye jata hai  */
+} 
+
+    .background{
+    transform: translateZ(-40px) scale(6);
+}
+
+    .foreground{
+        transform: translateZ(-20px) scale(3);
+}
+
+   .background,.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+    /* property that specify how a <img> or <vid> should be resiezed to fit its container */
+    object-fit: cover;
+   }
+   .heading{
+    position: absolute;
+    /* rem stands for root-em which is a unit of measurement that represents font-size of root element */
+    top: 3rem;
+    font-size: 10rem;
+    color: azure;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: (2px 2px 2px black);
+   }
+   
+   section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 5rem 0rem;
+   }
+
+   .secheading{
+    font-size: 5rem;
+    padding: 0 10rem;
+   }
+
+   .text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+   }
+
+   .desc{
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 0.5rem 2.5rem;
+    font-size: 350%;
+    transform: translateX(450px) translateY(250px);
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+   }
+
+   .bg{
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    /* The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed. */
+    background-attachment: fixed;
+    /* same as object-fit property */
+    background-size: cover;
+   }
+
+   .bg1{
+    background-image: url(https://github.com/kumaranshu347/Parallex-Effect-Website/blob/master/sport-1.jpg?raw=true);
+   }
+
+   .bg2{
+    background-image: url(https://github.com/kumaranshu347/Parallex-Effect-Website/blob/master/sport-2.jpg?raw=true);
+   }
+
+   .bg3{
+    background-image: url(https://github.com/kumaranshu347/Parallex-Effect-Website/blob/master/sport-3.jpg?raw=true);
+   }
+
+
+   
